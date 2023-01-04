@@ -28,48 +28,6 @@ function create_filter_element (data) {
 }
 
 
-// VG
-// CODE according to specification
-function add_group_toggling (filter_container_dom) {
-
-  /*
-    ARGUMENT
-      filter_container_dom: reference to a HTML-element that contains a set of fliter_elements
-            Exempel: the <ul> that contains the filters for Language.
-
-    SIDE EFFECTS
-      The function makes sure that when the user clicks on filter_container_dom, all the
-      filter_elements that it contains are selected / unselected.
-      Since some filter elements will have changed after the click, the list of
-      programmes must be updated.
-
-    NO RETURN VALUE
-
-  */
-  
-}
-
-
-// VG
-// CODE according to specifications
-function toggle_cities (event) {
-
-  /*
-
-    ARGUMENTS
-      This function does not take any arguments
-
-    SIDE EFFECTS
-      This function checks the state of the first city-filter-element (Madrid).
-      If it is selected then it de-selects ALL city-filter-elements
-      If it is de-selected then it selects ALL city-filter-elements 
-
-    NO RETURN VALUE
-
-  */
-
-}
-
 
 // WRITE SPECIFICATION
 // ATTENTION: You need to write the specification of all three functions:
