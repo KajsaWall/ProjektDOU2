@@ -304,13 +304,7 @@ function update_programmes () {
 }
 
 
-// G
-// WRITE SPECIFICATION
-// You must understand how this function works. There will be questions about it
-// in the code review (kodredovisning)
 
-// Optional VG: Which parts of the function's code could be abstracted?
-//              Implement it
 function read_filters () {
   
   /*
