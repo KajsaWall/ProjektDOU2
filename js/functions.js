@@ -29,11 +29,13 @@ function create_filter_element (data) {
 
 
 
-// WRITE SPECIFICATION
-// ATTENTION: You need to write the specification of all three functions:
-//            create_countries_cities_filters, create_country and create_city
 
-/*
+
+
+
+function create_countries_cities_filters () {
+
+  /*
   create_countries_cities_filters
 
       ARGUMENTS
@@ -45,8 +47,7 @@ function create_filter_element (data) {
       RETURN VALUE
       None.
   */
-
-function create_countries_cities_filters () {
+ 
   function create_country (country) {
     const dom = document.createElement("div");
     dom.classList.add("country");
