@@ -282,23 +282,9 @@ function create_programme (programme) {
 }
 
 
-// G
-// CODE according to the specification
+
 function update_programmes () {
 
-  /*
-      NO ARGUMENTS
-
-      SIDE EFFECTS
-        This function updates the programmes shown on the page according to
-        the current filter status (which filter elements are selected / unselected).
-        It uses the function read_filters to know which programmes need to be included.
-
-        VG: The top images (header) need to be updated here
-
-      NO RETURN VALUE
-
-  */
       let children = document.querySelectorAll(".parent div");
       for (const child of children) {
         child.remove();
@@ -312,7 +298,7 @@ function update_programmes () {
         let text = document.querySelector("#programmes > p");
         text.innerHTML = `Inga program uppfyller nuvarande filter.`;
       }
-      
+
       array_each(programmes, create_programme);
 
 }
