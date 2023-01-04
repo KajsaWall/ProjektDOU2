@@ -313,6 +313,19 @@ function update_programmes () {
 //              Implement it
 function read_filters () {
   
+  /*
+  ARGUMENTS
+  This function doesn't take any arguments.
+
+  SIDE-EFFECTS
+  This function creates an array "programmes" which includes all the programmes
+  (from the array PROGRAMMES) that includes what filters, city, level, subject, languages
+  that is selected, as well as any value taken from the search-field.
+
+  RETURN VALUE
+  programmes.
+  */
+
   const city_selected_dom = document.querySelectorAll("#country_filter li.selected");
 
   const city_id_selected = [];
