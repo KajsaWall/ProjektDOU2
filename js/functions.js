@@ -1,23 +1,6 @@
 
-// G
-// CODE According to specification
+
 function click_filter_element (event) {
-
-  /*
-    ARGUMENTS
-      event: event-object created when user clicks on one of the filter elements.
-
-    SIDE-EFFECTS
-      Marks the clicked filter element as selected / unselected.
-      Since a filter element will have changed after the click, the list of
-      programmes must be updated.
-
-      Attention VG
-        Careful with the propagation of the click-event
-
-    NO RETURN VALUE
-
-  */
 
     const filter_dom = event.currentTarget;
     filter_dom.classList.toggle("selected");
