@@ -182,6 +182,129 @@ function create_programme (programme) {
 
   */  
 
+    const grand_parent = document.querySelector("#programmes");
+    const parent = grand_parent.children[1];
+    parent.classList.add("parent");
+    const programme_name = programme.name;
+
+    let programme_level = programme.levelID;
+    let i = 0;
+    while(i < LEVELS.length) {
+      if(programme_level === LEVELS[i].id ) {
+        programme_level = LEVELS[i].name;
+        
+      }
+      i = i + 1;
+    }
+
+    let programme_subject = programme.subjectID;
+     i = 0;
+    while(i < SUBJECTS.length) {
+      if(programme_subject === SUBJECTS[i].id ) {
+        programme_subject = SUBJECTS[i].name;
+      
+      }
+      i = i + 1;
+    }
+
+    let programme_language = programme.languageID;
+    i = 0;
+    while(i < LANGUAGES.length) {
+      if(programme_language === LANGUAGES[i].id ) {
+        programme_language = LANGUAGES[i].name;
+      
+      }
+      i = i + 1;
+    }
+
+    let programme_universityID=programme.universityID;
+    i = 0;
+    while(i < UNIVERSITIES.length) {
+      if(programme_universityID === UNIVERSITIES[i].id ) {
+        programme_universityID = UNIVERSITIES[i].name;
+      
+      }
+      i = i + 1;
+    }
+
+    let programme_city = programme.universityID;
+    i = 0;
+    while(i < UNIVERSITIES.length) {
+      if(programme_city === UNIVERSITIES[i].id) {
+        programme_city = UNIVERSITIES[i].cityID;
+      }
+      i = i + 1;
+    }      
+    let ii = 0;   
+    while(ii < CITIES.length) {
+        if(programme_city === CITIES[ii].id) {
+          programme_city = CITIES[ii].name;
+        }       
+        ii = ii + 1;
+      }      
+
+      let programme_city_sun = programme.universityID;
+      i = 0;
+      while(i < UNIVERSITIES.length) {
+        if(programme_city_sun === UNIVERSITIES[i].id) {
+          programme_city_sun = UNIVERSITIES[i].cityID;
+        }
+        i = i + 1;
+      }      
+      ii = 0;   
+      while(ii < CITIES.length) {
+          if(programme_city_sun === CITIES[ii].id) {
+            programme_city_sun = CITIES[ii].sun;
+          }       
+          ii = ii + 1;
+        }      
+
+    
+    let programme_country = programme.universityID;
+    i = 0;
+    while(i < UNIVERSITIES.length) {
+      if(programme_country === UNIVERSITIES[i].id) {
+        programme_country = UNIVERSITIES[i].cityID;
+      }
+      i = i + 1;
+    }
+    ii = 0;
+    while(ii < CITIES.length) {
+    if(programme_country === CITIES[ii].id){
+    programme_country = CITIES[ii].countryID;
+    }
+    ii = ii + 1;
+    }
+    let iii = 0;
+    while(iii < COUNTRIES.length) {
+    if(programme_country === COUNTRIES[iii].id) {
+    programme_country = COUNTRIES[iii].name;
+    }
+    iii = iii + 1; 
+    }
+      
+
+    const new_programme = document.createElement("div");
+    const programme_div = document.createElement("div");
+    const programme_div2 = document.createElement("div");
+
+    programme_div.innerHTML = `
+    <p><b>${programme_name}</b> <br>
+    ${programme_universityID} <br>
+    ${programme_city}, ${programme_country} <br>
+    ${programme_level}, ${programme_subject}, ${programme_language} 
+    </p>`
+
+    programme_div2.innerHTML = `
+    <p>${programme_city}, sun-index: ${programme_city_sun} (${percenter(programme_city_sun, 365)}%)
+    </p>`
+    
+    programme_div2.classList.add("bottom_programme");
+    new_programme.classList.add("programme");
+    parent.appendChild(new_programme);
+    new_programme.appendChild(programme_div);
+    new_programme.appendChild(programme_div2);
+
 }
 
 
