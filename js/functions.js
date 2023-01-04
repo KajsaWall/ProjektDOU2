@@ -29,10 +29,6 @@ function create_filter_element (data) {
 
 
 
-
-
-
-
 function create_countries_cities_filters () {
 
   /*
@@ -47,7 +43,7 @@ function create_countries_cities_filters () {
       RETURN VALUE
       None.
   */
- 
+
   function create_country (country) {
     const dom = document.createElement("div");
     dom.classList.add("country");
