@@ -32,6 +32,20 @@ function create_filter_element (data) {
 // WRITE SPECIFICATION
 // ATTENTION: You need to write the specification of all three functions:
 //            create_countries_cities_filters, create_country and create_city
+
+/*
+  create_countries_cities_filters
+
+      ARGUMENTS
+      This function doesn't take any arguments.
+
+      SIDE-EFFECTS
+      Each element in the array COUNTRIES gets called as an argument in create_country.
+
+      RETURN VALUE
+      None.
+  */
+
 function create_countries_cities_filters () {
   function create_country (country) {
     const dom = document.createElement("div");
@@ -52,6 +66,27 @@ function create_countries_cities_filters () {
 
     array_each(cities, create_city);
   }
+
+  /*
+    create_country
+
+    ARGUMENTS
+    This function takes an object from array COUNTRIES that contains the following keys:
+    id (number): the country id
+    name (string): the country name
+    imagesNormal (array of strings): country images    
+    
+    SIDE-EFFECTS
+    This function creates a new dom-element and gives it two classes, “country” and “filter_container”,
+    sets a new id “country_” and country.id.
+    Appends the new dom-element to "#country_filter > ul".
+    Sets the new dom-element through innerHTML a country name and a ul.
+    For each element in the array CITIES that are in the country gets called as an argument in create_city.
+
+    RETURN VALUE
+    None.
+    */
+
   function create_city (city) {
 
     const dom = create_filter_element({
@@ -62,6 +97,21 @@ function create_countries_cities_filters () {
     dom.dataset.id = city.id;
 
   }
+
+    /*create_city
+
+    ARGUMENTS
+    This function takes an object from the array cities as an argument: city
+
+    SIDE-EFFECTS
+    This function creates a new dom-element and gives it the parent "#country_${city.countryID} > ul"
+    Gives the new dom-element the class "selected"
+    Sets the text content of the new dom-element to city.name
+    Sets dataset.id to city.id
+
+    RETURN VALUE
+    None.
+    */
 
   array_each(COUNTRIES, create_country);
 }
