@@ -119,6 +119,21 @@ function create_countries_cities_filters () {
 //    As you can see, all three functions below do basically the same thing.
 //    Abstract them to one function, and write the specification of that function.
 
+/*
+ARGUMENTS
+This function doesn't take any arguments.
+
+SIDE EFFECTS
+This function creates a new li element for each element in array LEVELS, SUBJECTS and
+LANGUAGE. 
+Sets the li element to the correct filter ul/parent.
+Sets the class to "selected".
+Sets the text content to the the elements name.
+
+RETURN VALUE
+None.
+*/
+
 function create_filter () {
     
   const arrayis = ["level", "subject", "language"];
@@ -152,6 +167,7 @@ function create_levels_filter () {
   }
   array_each(LEVELS, create_level);
 }
+
 // Create Subjects Filter
 function create_subjects_filter () {
   function create_subject (subject) {
