@@ -154,33 +154,7 @@ None.
 
 
 
-
-
-
-// G / VG (see details in specification)
-// CODE according to specifications
-function create_programme (programme) {
-  
-  /*
-
-    ARGUMENT
-      programme (object): One of the objects from PROGRAMMES
-
-    SIDE-EFFECTS
-      This function creates the HTML-element that contains all the information
-      about one programme, as seen in the video / image.
-      
-      VG: The background image is a random image from among the images of the city
-          in which the programme is (via the university)
-      G:  No background image required.
-
-
-      VG: The "see more" interaction must be included.
-      G:  The "see more" element is not required. And that information needs not be in place.
-
-    NO RETURN VALUE
-
-  */  
+function create_programme (programme) { 
 
     const grand_parent = document.querySelector("#programmes");
     const parent = grand_parent.children[1];
