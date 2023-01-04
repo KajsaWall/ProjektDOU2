@@ -18,13 +18,13 @@ function create_filter_element (data) {
   const parent = data.parent;
   const klass = data.class; 
 
-  const new_element = document.createElement("li");
-  new_element.classList.add(klass);
-  parent.appendChild(new_element);
-  new_element.textContent = text;
-  new_element.addEventListener("click", click_filter_element);
+  const new_dom_element = document.createElement("li");
+  new_dom_element.classList.add(klass);
+  parent.appendChild(new_dom_element);
+  new_dom_element.textContent = text;
+  new_dom_element.addEventListener("click", click_filter_element);
 
-  return new_element;
+  return new_dom_element;
 
 }
 
