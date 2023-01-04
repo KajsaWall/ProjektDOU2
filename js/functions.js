@@ -10,8 +10,7 @@ function click_filter_element (event) {
 }
 
 
-// G
-// CODE according to specification
+
 function create_filter_element (data) {
 
   const text = data.textContent;
